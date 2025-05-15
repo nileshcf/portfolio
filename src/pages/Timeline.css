@@ -1,0 +1,134 @@
+.timeline-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.gradient-text-timeline {
+  background: linear-gradient(to right, #007AFF, #6E00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-line {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #007AFF;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-year {
+  color: #6E00FF;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timeline-title-item {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border: 4px solid #007AFF;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.left .timeline-item-content {
+  margin-left: auto;
+}
+
+
+.timeline-item-content:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -11px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item.right .timeline-item-content {
+  margin-right: auto;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -11px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item.left .timeline-item-content,
+  .timeline-item.right .timeline-item-content {
+    margin: 0;
+  }
+
+  .timeline-item .timeline-dot {
+    left: 12px;
+    right: auto;
+  }
+}
