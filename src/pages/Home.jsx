@@ -44,10 +44,10 @@ const HomePage = () => {
 
       {/* Social Links */}
       <div className="social-section">
-        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
+        <a href="https://linkedin.com/in/your-linkedin" target="https://www.linkedin.com/in/nileshvermaa/" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" />
         </a>
-        <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/your-github" target="https://github.com/nileshcf" rel="noopener noreferrer">
           <FaGithub className="social-icon" />
         </a>
          <a href="/NileshResume.pdf" download>
