@@ -21,7 +21,8 @@
 }
 
 .gradient-text-home {
-  background: linear-gradient(to right, #2563eb, #9333ea, #ec4899);
+  background: #2A7B9B;
+background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -89,10 +90,17 @@
   margin-bottom: 3rem;
   text-align: center;
 }
+.gradient-text-section {
+   background: #242426;
+background: linear-gradient(90deg,rgba(36, 36, 38, 1) 0%, rgba(9, 9, 56, 1) 35%, rgba(5, 30, 36, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .section-heading {
-  font-size: 2rem;
-  font-weight: 600;
+  
+  font-size: 2.4rem;
+  font-weight: 650;
   margin-bottom: 1.5rem;
 }
 

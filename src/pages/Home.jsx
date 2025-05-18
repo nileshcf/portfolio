@@ -27,7 +27,7 @@ const HomePage = () => {
 
       {/* Skills Section */}
       <div className="skills-section">
-        <h2 className="section-heading">Skills & Technologies</h2>
+        <h2 className="section-heading gradient-text-section">Skills & Technologies</h2>
         <div className="skills-grid">
             <SiC title="C" className="tech-icon" />
             <SiCplusplus title="C++" className="tech-icon" />
