@@ -42,18 +42,20 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Social Links */}
-      <div className="social-section">
-        <a href="https://linkedin.com/in/your-linkedin" target="https://www.linkedin.com/in/nileshvermaa/" rel="noopener noreferrer">
-          <FaLinkedin className="social-icon" />
-        </a>
-        <a href="https://github.com/your-github" target="https://github.com/nileshcf" rel="noopener noreferrer">
-          <FaGithub className="social-icon" />
-        </a>
-         <a href="/NileshResume.pdf" download>
-          <FaFileDownload className="social-icon" title="Download Resume" />
-        </a>
-      </div>
+    <div className="social-section">
+  <h2 className="section-heading gradient-text-section">Connect with Me</h2>
+  <div className="social-icons">
+    <a href="https://linkedin.com/in/nileshvermaa/" target="_blank" rel="noopener noreferrer">
+      <FaLinkedin className="social-icon" />
+    </a>
+    <a href="https://github.com/nileshcf" target="_blank" rel="noopener noreferrer">
+      <FaGithub className="social-icon" />
+    </a>
+    <a href="/NileshResume.pdf" download>
+      <FaFileDownload className="social-icon" title="Download Resume" />
+    </a>
+  </div>
+</div>
     </section>
   );
 };

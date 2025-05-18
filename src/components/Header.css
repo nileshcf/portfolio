@@ -1,3 +1,12 @@
+/* Timeline Wrapper & Structure */
+.timeline-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Styles */
 .app-header {
   position: fixed;
   top: 0;
@@ -9,6 +18,9 @@
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app-header.scrolled {
@@ -18,9 +30,11 @@
 
 .nav-container {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .nav-links {
@@ -63,4 +77,232 @@
 
 .nav-link.active {
   font-weight: 600;
+}
+
+/* Header Time and Weather Info */
+.header-info {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.header-info .time,
+.header-info .weather {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.header-info .weather-icon {
+  font-size: 1rem;
+  color: #6E00FF;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #007AFF, #6E00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(#007AFF, #6E00FF);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline Item Base Style */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.timeline-item-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8ff 100%);
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.timeline-item-content:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 4px #6E00FF;
+  z-index: 4;
+}
+
+/* Header with Icon, Title and Year */
+.timeline-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  color: #1f2937;
+}
+
+.timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #6E00FF;
+}
+
+.timeline-separator {
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+.timeline-underline {
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to right, #007AFF, #6E00FF);
+  transition: width 0.4s ease;
+  margin: 0 auto 1rem auto;
+  border-radius: 999px;
+}
+
+.timeline-item-content:hover .timeline-underline {
+  width: 85%;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  padding-top: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.timeline-item-content:hover .timeline-description {
+  color: #1f2937;
+}
+
+/* LEFT ITEMS */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.left .timeline-item-content {
+  margin-left: auto;
+}
+
+/* RIGHT ITEMS */
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Animations */
+.subtle-fade-in {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+.subtle-rise-fade {
+  animation: riseFade 0.8s ease-in-out both;
+}
+
+.subtle-fade-in-delay {
+  animation: fadeIn 0.8s ease-in-out 0.3s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .timeline-item.left .timeline-item-content,
+  .timeline-item.right .timeline-item-content {
+    margin: 0;
+  }
+
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    top: 28px;
+    transform: translateX(0);
+  }
+
+  .timeline-header {
+    justify-content: flex-start;
+  }
 }

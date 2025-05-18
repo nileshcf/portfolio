@@ -9,6 +9,8 @@ const Home = lazy(() => import('./pages/Home'));
 const Timeline = lazy(() => import('./pages/Timeline'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Love = lazy(() => import('./pages/Love'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/timeline" element={<Timeline />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/love" element={<Love />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </Suspense>
       </main>

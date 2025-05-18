@@ -32,7 +32,7 @@ background: linear-gradient(90deg,rgba(5, 0, 143, 1) 0%, rgba(33, 33, 209, 1) 35
   bottom: 0;
   left: 50%;
   width: 4px;
-  background-color: #2121D1;
+  background-color: #0064ff;
   transform: translateX(-50%);
   z-index: 1;
 }
