@@ -2,7 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import profilePic from '../assets/profile-placeholder.png'; // Replace this with your actual profile image
 import { FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa';
-import { SiJavascript, SiPython, SiDocker, SiKubernetes, SiReact } from 'react-icons/si';
+import { SiC, SiCplusplus, SiJenkins, SiJavascript, SiPython, SiDocker, SiKubernetes, SiReact } from 'react-icons/si';
 
 const HomePage = () => {
   return (
@@ -29,11 +29,16 @@ const HomePage = () => {
       <div className="skills-section">
         <h2 className="section-heading">Skills & Technologies</h2>
         <div className="skills-grid">
-          <SiJavascript title="JavaScript" className="tech-icon" />
-          <SiPython title="Python" className="tech-icon" />
-          <SiDocker title="Docker" className="tech-icon" />
-          <SiKubernetes title="Kubernetes" className="tech-icon" />
-          <SiReact title="React" className="tech-icon" />
+            <SiC title="C" className="tech-icon" />
+            <SiCplusplus title="C++" className="tech-icon" />
+            <SiJenkins title="Jenkins" className="tech-icon" />
+            <SiJavascript title="JavaScript" className="tech-icon" />
+            <SiPython title="Python" className="tech-icon" />
+            <SiDocker title="Docker" className="tech-icon" />
+            <SiKubernetes title="Kubernetes" className="tech-icon" />
+            <SiReact title="React" className="tech-icon" />
+            {/* <SiMicrosoftazure title="Azure" className="tech-icon" /> */}
+            
         </div>
       </div>
 
@@ -45,7 +50,7 @@ const HomePage = () => {
         <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" />
         </a>
-         <a href="/assets/NileshResume.pdf" download>
+         <a href="/NileshResume.pdf" download>
           <FaFileDownload className="social-icon" title="Download Resume" />
         </a>
       </div>
