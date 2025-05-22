@@ -64,7 +64,9 @@ const Header = () => {
   const links = [
     { path: '/', name: 'Bio' },
     { path: '/timeline', name: 'Journey' },
-    { path: '/projects', name: 'Projects' }
+    { path: '/projects', name: 'Projects' },
+    { path: '/contact', name: 'Contact' }
+
   ];
 
   return (
