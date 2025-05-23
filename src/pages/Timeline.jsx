@@ -2,55 +2,55 @@
 import React from 'react';
 import TimelineItem from '../components/Timeline/TimelineItem';
 import './Timeline.css';
+
 const timelineData = [
   {
     year: '2027',
     title: 'MBA in Progress – IIT Patna',
-    description: 'Pursuing Master of Business Administration from Indian Institute of Technology, Patna, Bihar.'
+    description: 'Pursuing MBA at Indian Institute of Technology, Patna.',
+    type: 'education'
   },
   {
     year: '2023',
-    title: 'Started as DevOps Engineer at Cloudframe',
-    description: 'Took lead as a DevOps engineer, deployed and managed multiple projects using Jenkins, Docker, and Azure. Worked closely with development, QA, and operations teams.'
+    title: 'DevOps Engineer – Cloudframe',
+    description: 'Leading deployments with Jenkins, Docker, and Azure.',
+    type: 'work'
   },
   {
     year: '2023',
-    title: 'Graduated B.E. in Information Science',
-    description: `Graduated from Nitte Meenakshi Institute of Technology, Bengaluru with a GPA of 9.07. Published paper: "Predictive Pricing Model for Shared Economy Ride Applications" [Springer Link](https://link.springer.com/chapter/10.1007/978-3-031-43940-7_3).`
+    title: 'Graduated B.E. – NMIT Bengaluru',
+    description: 'GPA 9.07 | Published a paper with Springer.',
+    type: 'graduation'
   },
   {
     year: '2022 – 2023',
-    title: 'Internship at Centre for Railway Information Systems',
-    description: 'Worked on deploying native Java-based applications using modern frameworks under the Ministry of Railways.'
+    title: 'Internship – CRIS (Railways)',
+    description: 'Deployed Java-based applications under Govt. projects.',
+    type: 'internship'
   },
   {
     year: '2017',
-    title: 'Completed XII (CBSE)',
-    description: 'Scored 80% in PCM-CS stream at Jagran Public School, Lucknow under the CBSE board.'
+    title: 'Completed XII – CBSE',
+    description: 'PCM-CS | Jagran Public School, Lucknow.',
+    type: 'school'
   },
   {
     year: '2015',
-    title: 'High School Milestone',
-    description: 'Completed 10th grade from Jagran Public School, Lucknow with a perfect GPA of 10.'
+    title: '10th Grade – CBSE',
+    description: 'Perfect GPA: 10 | Jagran Public School, Lucknow.',
+    type: 'school'
   }
 ];
 
 const Timeline = () => {
   return (
-    <section className="timeline-wrapper">
+    <section className="timeline-section">
       <h2 className="timeline-title">
         My <span className="gradient-text-timeline">Journey</span>
       </h2>
-      <div className="timeline-container">
-        <div className="timeline-line"></div>
+      <div className="timeline-list">
         {timelineData.map((item, index) => (
-          <TimelineItem
-            key={index}
-            year={item.year}
-            title={item.title}
-            description={item.description}
-            index={index}
-          />
+          <TimelineItem key={index} {...item} />
         ))}
       </div>
     </section>
