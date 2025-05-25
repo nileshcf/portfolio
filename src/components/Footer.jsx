@@ -7,18 +7,21 @@ const Footer = () => {
 
   return (
     <footer className="app-footer">
-      <div className="footer-content">
-        <p className="copyright">© {new Date().getFullYear()} My Portfolio</p>
+      <div className="footer-inner">
+        <p className="footer-text">
+          © {new Date().getFullYear()} Nilesh Verma • All rights reserved.
+        </p>
         <div className="footer-links">
           <Link to="/privacy" className="footer-link">Privacy</Link>
           <Link to="/terms" className="footer-link">Terms</Link>
-          <Link 
-            to="/love" 
+          <Link
+            to="/love"
             className="footer-link heart-link"
             onMouseEnter={() => setHoverHeart(true)}
             onMouseLeave={() => setHoverHeart(false)}
+            aria-label="Heart page"
           >
-            <span className={`heart ${hoverHeart ? 'animate' : ''}`}>❤️</span>
+            <span className={`heart ${hoverHeart ? 'beat' : ''}`}>❤️</span>
           </Link>
         </div>
       </div>

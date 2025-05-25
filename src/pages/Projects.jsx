@@ -5,7 +5,31 @@ import ProjectPreviewPane from './ProjectPreviewPane';
 const projectData = [
 
     {
-    title: 'Portfolio Website',
+        title: 'Sandbox for Codenavigator',
+        description: 'An automated sandbox deployment platform integrating UI, backend, and CI/CD to spin up demo environments on demand.',
+        details: `This internal tooling project enables seamless deployment of isolated environments for product demos:
+      - A JavaScript-based UI button embedded in a WordPress site triggers the process.
+      - The button hits an Express.js backend hosted in Docker, which securely handles Jenkins credentials and manages job execution.
+      - Jenkins pulls, builds, dockerizes, and deploys a Java project to a remote server, returning the live URL.`,
+        link: '#', // replace with actual link if available
+        image: '../../src/assets/sandbox_project.png', // update with your project image
+        accordionItems: [
+          {
+            title: "WordPress UI Integration",
+            content: "A JS script deployed in WordPress displays a trigger button that initiates a sandbox deployment flow and polls the backend for deployment status."
+          },
+          {
+            title: "Node.js Express Middleware",
+            content: "Handles secure API calls from the UI, triggers Jenkins pipelines, and serves console outputs and deployment details to the frontend."
+          },
+          {
+            title: "Jenkins CI/CD",
+            content: "Builds and dockerizes a Java project from an internal Git repo and deploys it to a remote server, exposing the sandbox to customers."
+          }
+        ]
+      },
+   {
+    title: 'Portfolio Website2',
     description: 'A personal portfolio built using React and styled with Apple-inspired design.',
     details: 'This project showcases a full-stack developer portfolio using modern React hooks, reusable components, routing, and smooth scroll behavior. It reflects Apple-inspired glassmorphism, soft shadows, and subtle motion for interaction.',
     link: '#',

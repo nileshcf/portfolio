@@ -1,62 +1,70 @@
 .app-footer {
-  padding: 2rem;
-  background-color: #f5f5f7;
-  color: #6e6e73;
-  font-size: 0.8rem;
+  background-color: #0e0e0e;
+  color: #bbb;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #222;
+  margin-top: auto;
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
 }
 
 .footer-links {
   display: flex;
   gap: 1.5rem;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-link {
-  color: #6e6e73;
+  color: #bbb;
   text-decoration: none;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #1d1d1f;
-}
-
-.heart-link {
-  display: flex;
-  align-items: center;
+  color: #fff;
 }
 
 .heart {
-  font-size: 1rem;
+  display: inline-block;
   transition: transform 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.heart.animate {
-  animation: heartbeat 1s infinite;
+.heart.beat {
+  animation: beat 0.6s infinite alternate;
 }
 
-@keyframes heartbeat {
+@keyframes beat {
   0% {
     transform: scale(1);
   }
-  25% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.1);
-  }
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    gap: 1rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
   }
 }
