@@ -12,7 +12,7 @@ const projectData = [
 - The button hits an Express.js backend hosted in Docker, which securely handles Jenkins credentials and manages job execution.
 - Jenkins pulls, builds, dockerizes, and deploys a Java project to a remote server, returning the live URL.`,
   link: '#', // replace with actual link if available
-  image: '/src/assets/sandbox_project.png', // update with your project image
+  image: '/sandbox_project.png', // update with your project image
   accordionItems: [
     {
       title: "WordPress UI Integration",
@@ -33,7 +33,7 @@ const projectData = [
   description: 'A multi-module CI/CD pipeline for building, testing, and Dockerizing Java projects with custom user environments.',
   details: 'Designed and implemented an advanced Jenkins pipeline using scripted Groovy syntax. It dynamically allocates PostgreSQL ports per user, builds Maven-based multi-module Java projects, handles resource constraints gracefully, packages Docker containers, and archives build artifacts with rollback capabilities.',
   link: '#', // Replace with GitHub/demo link
-  image: '/src/assets/pipeline_project.png', // Replace with relevant pipeline image or diagram
+  image: '/pipeline_project.png', // Replace with relevant pipeline image or diagram
   accordionItems: [
     {
       title: "Dynamic Port Allocation",
