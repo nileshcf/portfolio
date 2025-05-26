@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer className="app-footer">
-      <div className="footer-content">
+      <div className="footer-inner">
         <p className="copyright">© {new Date().getFullYear()} My Portfolio</p>
         <div className="footer-links">
           <Link to="/privacy" className="footer-link">Privacy</Link>

@@ -1,10 +1,10 @@
 /* ContactMe.css */
-
+/* 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
 .contact-container {
   max-width: 600px;

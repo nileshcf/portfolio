@@ -18,6 +18,7 @@ function App() {
   return (
     <Router>
       <Header />
+    <div className="main-wrapper"> {/* new wrapper for content */}
       <main className="main-content">
         <Suspense fallback={<Loading />}>
           <Routes>
@@ -31,6 +32,7 @@ function App() {
           </Routes>
         </Suspense>
       </main>
+      </div>
       <Footer />
       <Analytics /> {/* ✅ Added here */}
     </Router>
