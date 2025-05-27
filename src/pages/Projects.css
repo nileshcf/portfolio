@@ -86,6 +86,7 @@
   background: #30db84;
   transition: width 0.3s ease;
   margin-top: 4px;
+  
 }
 
 .project-card:hover .project-title::after {
