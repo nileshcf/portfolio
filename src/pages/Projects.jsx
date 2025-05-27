@@ -56,8 +56,36 @@ const projectData = [
       content: "Implements safeguards to prevent overlapping builds when no ports are available, with descriptive build termination messaging."
     }
   ]
-},
-
+},{
+  title: 'Event-Driven Java Debugger Backend',
+  description: 'A backend system for real-time debugging of Java programs by intercepting and analyzing JVM events to monitor variable states and program flow.',
+  details: 'Contributed to the development of a Java-based debugger backend that leverages the Java Debug Interface (JDI) to capture runtime events such as method entry/exit, variable changes, and breakpoints. Implemented handlers to track and log variable values and control program execution flow for enhanced debugging capabilities. Enabled a visual front-end to correlate runtime data with source code in real-time.',
+  link: '#', // Replace with GitHub/demo link
+  image: '/debugger_backend.png', // Replace with relevant debugger architecture diagram or screenshot
+  accordionItems: [
+    {
+      title: "JVM Event Interception",
+      content: "Used JDI to listen for events like breakpoints, variable modifications, and method invocations to enable dynamic inspection of the target program."
+    },
+    {
+      title: "Variable State Tracking",
+      content: "Tracked variable values during program execution and maintained a history of changes to aid in runtime analysis and debugging."
+    },
+    {
+      title: "Custom Debug Operations",
+      content: "Implemented custom handlers to pause/resume execution, inspect call stacks, and manipulate program flow based on debug events."
+    },
+    {
+      title: "Source Mapping & Visualization",
+      content: "Integrated with a UI layer to visually represent live variable states and program flow, mapped directly to source code lines."
+    },
+    {
+      title: "Extensible Architecture",
+      content: "Designed the backend to support plug-and-play modules for new event types, making the debugger flexible for future use cases."
+    }
+  ]
+}
+,
   {
     title: 'Finance Dashboard',
     description: 'Interactive dashboard with charts and tables for financial data analysis.',

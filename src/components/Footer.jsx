@@ -18,7 +18,7 @@ const Footer = () => {
             onMouseEnter={() => setHoverHeart(true)}
             onMouseLeave={() => setHoverHeart(false)}
           >
-            <span className={`heart ${hoverHeart ? 'animate' : ''}`}>❤️</span>
+            {/* <span className={`heart ${hoverHeart ? 'animate' : ''}`}>❤️</span> */}
           </Link>
         </div>
       </div>
