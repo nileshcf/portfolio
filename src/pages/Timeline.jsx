@@ -5,19 +5,19 @@ import './Timeline.css';
 
 const timelineData = [
   {
-    year: '2027',
+    year: '2025 - 2027',
     title: 'MBA in Progress – IIT Patna',
     description: 'Pursuing MBA at Indian Institute of Technology, Patna.',
     type: 'education'
   },
   {
-    year: '2023',
+    year: '2023 - Present',
     title: 'DevOps Engineer – Cloudframe',
     description: 'Leading deployments with Jenkins, Docker, and Azure.',
     type: 'work'
   },
   {
-    year: '2023',
+    year: '2019 - 2022',
     title: 'Graduated B.E. – NMIT Bengaluru',
     description: 'GPA 9.07 | Published a paper with Springer.',
     type: 'graduation'

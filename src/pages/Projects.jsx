@@ -84,29 +84,66 @@ const projectData = [
       content: "Designed the backend to support plug-and-play modules for new event types, making the debugger flexible for future use cases."
     }
   ]
-}
-,
-  {
-    title: 'Finance Dashboard',
-    description: 'Interactive dashboard with charts and tables for financial data analysis.',
-    details: 'A powerful React + Chart.js interface that pulls financial metrics from various sources, rendering charts, tables, and insights in a responsive dark-mode layout.',
-    link: '#',
-    image: '/assets/project3.png',
+},
+{
+  title: "Java Bus Management System",
+  description: "A native Java Swing-based bus management system with MySQL integration, offering full CRUD operations for buses, drivers, conductors, routes, passengers, and tours.",
+  details: "Developed a desktop application using Java Swing and MySQL Connector/J that enables administrators and operators to manage all aspects of bus transportation — from scheduling tours and assigning routes to managing passengers and staff. The system includes login/signup authentication and multiple user roles such as Admin, Conductor, Driver, and Passenger.",
+  link: "https://github.com/newton00009/bus_management", // Replace with GitHub repo or demo link
+  image: "/bus_management_preview.png", // Replace with screenshot or dashboard preview
   accordionItems: [
     {
-      title: "iPhone and Mac",
-      content: "Use your iPhone with your Mac for seamless file transfers, Continuity features, and Universal Clipboard."
+      title: "Modular GUI with Swing",
+      content: "Each feature (add/update/delete/view) for buses, conductors, drivers, passengers, and routes is built as a separate GUI module using Swing's form builder."
     },
     {
-      title: "iPhone and Apple Watch",
-      content: "Unlock your iPhone with Apple Watch, receive calls, and sync fitness data effortlessly."
+      title: "MySQL-Backed Data Persistence",
+      content: "All data such as tours, schedules, and staff assignments are stored and retrieved using MySQL via JDBC connection."
     },
     {
-      title: "iPhone and AirPods",
-      content: "Set up AirPods on iPhone with just a tap. Adaptive Audio automatically adjusts noise control for optimal listening based on your environment."
+      title: "Authentication and User Roles",
+      content: "Includes login/signup functionality with separate dashboards for Admin, Conductor, Driver, and Passenger."
+    },
+    {
+      title: "Tour & Route Management",
+      content: "Admins can create and assign routes to buses, track upcoming tours, and validate conductor-driver pairing."
+    },
+    {
+      title: "Full CRUD Operations",
+      content: "Each entity supports full lifecycle management including add, update, delete, and view operations."
     }
   ]
-  },
+},
+ {
+  title: 'Personal Budgeting Web App',
+  description: 'A full-stack budgeting application that helps users track expenses, manage earnings, and visualize spending patterns with real-time charts.',
+  details: 'Built a MERN-stack budgeting tool with secure authentication, dynamic chart rendering, and intuitive expense tracking. Users can register, log in, add or remove expenses, update earnings, and get real-time financial insights. The backend includes a robust JWT-based authentication system and MongoDB-powered data management.',
+  link: 'https://github.com/Prateekg2050/Budgeting_WebApplication', 
+  image: '/budgeting_app_preview.png',
+  accordionItems: [
+    {
+      title: "Secure Auth & JWT Integration",
+      content: "Implemented user registration and login with hashed passwords using bcrypt and JWT tokens for secure route access."
+    },
+    {
+      title: "Expense CRUD API (Express + MongoDB)",
+      content: "Users can add, view, and delete expenses through authenticated API routes that interact with MongoDB collections."
+    },
+    {
+      title: "Earning Update & Storage",
+      content: "Added PATCH route for updating and storing monthly earnings per user with real-time data sync."
+    },
+    {
+      title: "Frontend with React & Fluent Charts",
+      content: "Built a sleek and responsive UI in React with interactive charts to display monthly breakdowns and totals."
+    },
+    {
+      title: "Role-based Data Access",
+      content: "JWT payload includes admin roles and user metadata for customizing experience and future multi-role support."
+    }
+  ]
+}
+
 
 ];
 
